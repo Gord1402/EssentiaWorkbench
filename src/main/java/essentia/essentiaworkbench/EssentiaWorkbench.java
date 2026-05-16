@@ -1,10 +1,7 @@
 package essentia.essentiaworkbench;
 
 import com.mojang.logging.LogUtils;
-import essentia.essentiaworkbench.registry.ModBlockEntities;
-import essentia.essentiaworkbench.registry.ModBlocks;
-import essentia.essentiaworkbench.registry.ModCreativeModTabs;
-import essentia.essentiaworkbench.registry.ModItems;
+import essentia.essentiaworkbench.registry.*;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.food.FoodProperties;
@@ -51,6 +48,7 @@ public class EssentiaWorkbench {
         ModBlocks.BLOCKS.register(modEventBus);
         ModItems.ITEMS.register(modEventBus);
         ModBlockEntities.BLOCK_ENTITIES.register(modEventBus);
+        ModMenuTypes.MENUS.register(modEventBus);
         ModCreativeModTabs.CREATIVE_MODE_TABS.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
